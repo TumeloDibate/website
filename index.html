@@ -36,7 +36,6 @@
         }
         .social-icons {
             margin-top: 10px;
-            colour: white;
         }
         .social-icons a {
             margin: 0 10px;
@@ -53,12 +52,16 @@
         .current-date-time {
             margin: 10px 0;
             font-size: 1.3em; /* Size for date/time */
-            colour: white;
             border-radius: 4px;
         }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Space between grid items */
+            padding: 20px; /* Padding around grid */
+        }
         section {
-            background-color: rgba(155, 155, 155, 0.9); /* White semi-transparent background */
-            margin: 20px;
+            background-color: rgba(155, 155, 155, 0.9); /* Grey semi-transparent background */
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -121,41 +124,43 @@
     <p id="current-date-time" class="current-date-time"></p>
 </header>
 
-<section>
-    <h2>🖥️ Our Services</h2>
-    <ul>
-        <li><span class="icon">🎵</span> <strong>Music Artists Websites:</strong> Showcase your music portfolio.</li>
-        <li><span class="icon">📄</span> <strong>CV & Portfolio Websites:</strong> Stand out with a professional online presence.</li>
-        <li><span class="icon">🍔</span> <strong>Small Business Websites:</strong> Sell products online (e.g., kotas or any product).</li>
-    </ul>
-</section>
+<div class="grid-container">
+    <section>
+        <h2>🖥️ Our Services</h2>
+        <ul>
+            <li><span class="icon">🎵</span> <strong>Music Artists Websites:</strong> Showcase your music portfolio.</li>
+            <li><span class="icon">📄</span> <strong>CV & Portfolio Websites:</strong> Stand out with a professional online presence.</li>
+            <li><span class="icon">🍔</span> <strong>Small Business Websites:</strong> Sell products online (e.g., kotas or any product).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>✨ Additional Features</h2>
-    <ul>
-        <li><span class="icon">🛒</span> <strong>E-Commerce Websites:</strong> Full store setup with payment integrations.</li>
-        <li><span class="icon">📅</span> <strong>Booking & Event Sites:</strong> Let customers book appointments online.</li>
-        <li><span class="icon">🚀</span> <strong>Digital Branding:</strong> From logos to digital business cards.</li>
-        <li><span class="icon">📈</span> <strong>SEO & Social Media Integration:</strong> Grow your business online.</li>
-        <li><span class="icon">🍴</span> <strong>Restaurant Websites:</strong> Menus, ordering, and delivery options.</li>
-        <li><span class="icon">🏡</span> <strong>Real Estate Listings:</strong> Sleek property listings with virtual tours.</li>
-    </ul>
-</section>
+    <section>
+        <h2>✨ Additional Features</h2>
+        <ul>
+            <li><span class="icon">🛒</span> <strong>E-Commerce Websites:</strong> Full store setup with payment integrations.</li>
+            <li><span class="icon">📅</span> <strong>Booking & Event Sites:</strong> Let customers book appointments online.</li>
+            <li><span class="icon">🚀</span> <strong>Digital Branding:</strong> From logos to digital business cards.</li>
+            <li><span class="icon">📈</span> <strong>SEO & Social Media Integration:</strong> Grow your business online.</li>
+            <li><span class="icon">🍴</span> <strong>Restaurant Websites:</strong> Menus, ordering, and delivery options.</li>
+            <li><span class="icon">🏡</span> <strong>Real Estate Listings:</strong> Sleek property listings with virtual tours.</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>🔗 Why Choose Us?</h2>
-    <ul>
-        <li><span class="icon">✔️</span> Professional, mobile-friendly designs.</li>
-        <li><span class="icon">✔️</span> Tailored solutions for your business or personal brand.</li>
-        <li><span class="icon">✔️</span> Easy-to-manage websites with ongoing support.</li>
-    </ul>
-</section>
+    <section>
+        <h2>🔗 Why Choose Us?</h2>
+        <ul>
+            <li><span class="icon">✔️</span> Professional, mobile-friendly designs.</li>
+            <li><span class="icon">✔️</span> Tailored solutions for your business or personal brand.</li>
+            <li><span class="icon">✔️</span> Easy-to-manage websites with ongoing support.</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>📧 Get In Touch</h2>
-    <p>Contact us via email: <a href="mailto:dibatets@gmail.com">dibatets@gmail.com</a></p>
-    <p>Or visit our website: <a href="https://yourwebsite.com">www.yourwebsite.com</a></p>
-</section>
+    <section>
+        <h2>📧 Get In Touch</h2>
+        <p>Contact us via email: <a href="mailto:dibatets@gmail.com">dibatets@gmail.com</a></p>
+        <p>Or visit our website: <a href="https://yourwebsite.com">www.yourwebsite.com</a></p>
+    </section>
+</div>
 
 <footer>
     <p class="footer-text">Connect with us on social media</p>
