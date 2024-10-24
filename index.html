@@ -10,7 +10,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('0lzi4jzk.png'); /* Replace with your image path */
+            background-image: url('0lzi4jzk.png'); /* Main background image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -56,7 +56,7 @@
             font-size: 0.8em;
             color: white;
             margin: 0 20px;
-            text-align: center;
+            text-align: right;
             flex: 1;
         }
 
@@ -105,20 +105,32 @@
             50% { transform: translateY(-10px); }
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
         section {
-            background-color: rgba(10, 90, 50, 0.2);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             color: white;
             font-weight: 500;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+
+        /* Background images for each section */
+        #home {
+            background-image: url('home-bg.jpg'); /* Replace with your home background image */
+        }
+
+        #services {
+            background-image: url('services-bg.jpg'); /* Replace with your services background image */
+        }
+
+        #about {
+            background-image: url('about-bg.jpg'); /* Replace with your about background image */
+        }
+
+        #contact {
+            background-image: url('contact-bg.jpg'); /* Replace with your contact background image */
         }
 
         h2 {
@@ -212,19 +224,14 @@
     <h3>"Bring Your Vision to Life with Affordable Custom Websites"</h3>
 </div>
 
-<div class="image-container">
-    <img src="catering.png" alt="Website Design Example 1">
-    <img src="food.png" alt="Website Design Example 1"> 
-    <img src="salon.png" alt="Website Design Example 1">
-    <img src="DJ.png" alt="Website Design Example 2">
-    <img src="realestate.png" alt="Website Design Example 2">
-    <img src="MC.png" alt="Website Design Example 1">
-</div>
-
 <!-- Home Section -->
 <section id="home">
     <h2>Welcome to Our Website</h2>
     <p>Your one-stop solution for all website design needs. We cater to various industries, ensuring a unique online presence for each client.</p>
+    <div class="image-container">
+        <img src="home1.jpg" alt="Home Image 1">
+        <img src="home2.jpg" alt="Home Image 2">
+    </div>
 </section>
 
 <!-- Services Section -->
@@ -235,12 +242,20 @@
         <li><span class="icon">📄</span> <strong>CV & Portfolio Websites:</strong> Stand out with a professional online presence.</li>
         <li><span class="icon">🍔</span> <strong>Small Business Websites:</strong> Sell products online (e.g., kotas or any product).</li>
     </ul>
+    <div class="image-container">
+        <img src="service1.jpg" alt="Service Image 1">
+        <img src="service2.jpg" alt="Service Image 2">
+    </div>
 </section>
 
 <!-- About Section -->
 <section id="about">
     <h2>✨ About Us</h2>
     <p>We are a team of passionate designers committed to bringing your vision to life. With years of experience, we understand what it takes to create stunning and functional websites.</p>
+    <div class="image-container">
+        <img src="about1.jpg" alt="About Image 1">
+        <img src="about2.jpg" alt="About Image 2">
+    </div>
 </section>
 
 <!-- Contact Section -->
@@ -249,6 +264,10 @@
     <p>Contact us via email: <a href="mailto:dibatets@gmail.com">dibatets@gmail.com</a></p>
     <p>Or visit our website: <a href="https://tumelodibate.github.io/">www.yourwebsite.com</a></p>
     <p>Click our socials on top of the page</p>
+    <div class="image-container">
+        <img src="contact1.jpg" alt="Contact Image 1">
+        <img src="contact2.jpg" alt="Contact Image 2">
+    </div>
 </section>
 
 <footer>
