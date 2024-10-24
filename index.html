@@ -26,11 +26,9 @@
             border-bottom: 10px solid white; /* White line */
         }
 
-        /* New .header-title class to center the h1 and h3 */
         .header-title {
             text-align: center;
             margin-top: -70px; /* Adjusted margin to position it above the white line */
-            
         }
 
         header h1 {
@@ -42,8 +40,18 @@
         h3 {
             margin: 10px 0;
             font-weight: 300;
-            font-size: 0.8em;
+            font-size: 1.2em; /* Increased font size for emphasis */
             font-style: italic;
+            animation: bounce 2s infinite; /* Apply bounce animation */
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Start and end at original position */
+            }
+            50% {
+                transform: translateY(-10px); /* Move up 10px at halfway point */
+            }
         }
 
         .social-icons {
@@ -132,9 +140,23 @@
         }
 
         p {
-            font-size: 0.7em;
+            font-size: 0.8em;
             color: white;
             margin-bottom: 15px;
+        }
+
+        .image-container {
+            display: flex; /* Flexbox for aligning images */
+            justify-content: center; /* Center images */
+            margin: 20px 0; /* Add margin above and below images */
+        }
+
+        .image-container img {
+            width: 300px; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 10px; /* Add space between images */
+            border-radius: 10px; /* Rounded corners for images */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for images */
         }
     </style>
 </head>
@@ -150,10 +172,14 @@
     </div>
 </header>
 
-<!-- New div to center h1 and h3 -->
 <div class="header-title">
     <h1>Tumelo Dibate's Website Design Services</h1>
     <h3>"Bring Your Vision to Life with Affordable Custom Websites"</h3>
+</div>
+
+<div class="image-container">
+    <img src="design_image1.jpg" alt="Website Design Example 1"> <!-- Replace with your image path -->
+    <img src="design_image2.jpg" alt="Website Design Example 2"> <!-- Replace with your image path -->
 </div>
 
 <div class="grid-container">
@@ -184,8 +210,8 @@
             <li><span class="icon">✔️</span> Professional, mobile-friendly designs.</li>
             <li><span class="icon">✔️</span> Tailored solutions for your business or personal brand.</li>
             <li><span class="icon">✔️</span> Easy-to-manage websites with ongoing support.</li>
-            <li><span class="icon">✔️</span> Affortable prices</li>
-            <li><span class="icon">✔️</span> We deliver best services for our clients</li>
+            <li><span class="icon">✔️</span> Affordable prices</li>
+            <li><span class="icon">✔️</span> We deliver the best services for our clients</li>
         </ul>
     </section>
 
