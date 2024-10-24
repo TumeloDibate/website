@@ -19,7 +19,9 @@
             background-color: rgba(0, 90, 123, 0.5); /* Slightly darker and semi-transparent */
             color: white;
             padding: 10px 20px; /* Reduced padding for a more compact header */
-            text-align: center;
+            display: flex; /* Using flexbox for positioning */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Vertically center items */
             border-bottom: 10px solid white;
         }
         header h1 {
@@ -50,7 +52,6 @@
             transform: scale(1.3);
         }
         .current-date-time {
-            margin: 10px 0;
             font-size: 1.3em; /* Size for date/time */
             border-radius: 5px;
             color: white;
@@ -62,12 +63,12 @@
             padding: 20px; /* Padding around grid */
         }
         section {
-            background-color: rgba(0, 90, 50, 0.2); /* Grey semi-transparent background */
+            background-color: rgba(10, 90, 50, 0.2); /* Grey semi-transparent background */
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            color: black; /* Darker text for readability */
-            font-weight: 500;
+            color: white; /* Darker text for readability */
+            font-weight: 1000;
         }
         h2 {
             color: #007bff; /* Primary color for headings */
@@ -115,16 +116,17 @@
 <body>
 
 <header>
-    <h1>Tumelo Website Design Services</h1>
-    <h3>Bring Your Vision to Life with Affordable Custom Websites</h3>
+    <div class="current-date-time" id="current-date-time"></div>
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
         <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
         <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
         <a href="https://linkedin.com" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
     </div>
-    <p id="current-date-time" class="current-date-time"></p>
 </header>
+
+<h1>Tumelo Website Design Services</h1>
+<h3>Bring Your Vision to Life with Affordable Custom Websites</h3>
 
 <div class="grid-container">
     <section>
