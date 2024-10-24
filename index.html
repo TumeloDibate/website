@@ -15,43 +15,71 @@
             background-position: center;
             background-repeat: no-repeat;
             color: #fff;
-            }
-    header {
+        }
+
+        header {
             background-color: rgba(0, 90, 123, 0.5);
             color: white;
             padding: 10px 20px;
             display: flex;
-            flex-direction: row; /* Change to row for horizontal layout */
             justify-content: space-between; /* Space out elements */
             align-items: center; /* Center items vertically */
             border-bottom: 10px solid white;
-            }
+        }
 
-    .menu-bar {
-            background-color: rgba(0, 90, 123, 0.7);
-            width: auto; /* Allow width to adjust based on content */
-            }
+        .menu-bar {
+            flex: 1; /* Allow the menu to take available space */
+        }
 
-    .menu-bar ul {
+        .menu-bar ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            }
+            display: flex; /* Use flexbox for horizontal alignment */
+        }
 
-    .menu-bar ul li {
-            display: inline; /* Align menu items horizontally */
-            margin: 0 15px;
-            }
+        .menu-bar ul li {
+            margin: 0 15px; /* Space out menu items */
+        }
 
-    .menu-bar ul li a {
+        .menu-bar ul li a {
             color: white;
             text-decoration: none;
             padding: 10px;
-            }
+        }
 
-    .menu-bar ul li a:hover {
+        .menu-bar ul li a:hover {
             text-decoration: underline;
-            }
+        }
+
+        .current-date-time {
+            font-size: 0.8em;
+            color: white;
+            margin: 0 20px; /* Add some margin for spacing */
+            text-align: right; /* Align text to the right */
+            flex: 1; /* Allow it to take available space */
+        }
+
+        .social-icons {
+            display: flex; /* Use flex for alignment */
+            align-items: center; /* Center icons vertically */
+            flex: 1; /* Allow it to take available space */
+            justify-content: flex-end; /* Align to the right */
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.3);
+        }
 
         .header-title {
             text-align: center;
@@ -75,32 +103,6 @@
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
-        }
-
-        .social-icons {
-            display: flex; /* Use flex for alignment */
-            align-items: center; /* Center icons vertically */
-            margin-top: 0; /* Adjust margin */
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            }
-
-        .social-icons img {
-            width: 30px;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.3);
-        }
-
-       .current-date-time {
-            font-size: 0.6em;
-            color: white;
-            margin: 0 20px; /* Add some margin for spacing */
         }
 
         .grid-container {
@@ -182,28 +184,25 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-top">
-        <div class="menu-bar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="current-date-time" id="current-date-time"></div>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><img src="facebook.jpeg" alt="Facebook"></a>
-            <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="twitter.jpeg" alt="Twitter"></a>
-            <a href="https://linkedin.com" target="_blank"><img src="linkedin.jpeg" alt="LinkedIn"></a>
-        </div>
+    <div class="menu-bar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="current-date-time" id="current-date-time"></div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><img src="facebook.jpeg" alt="Facebook"></a>
+        <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://twitter.com" target="_blank"><img src="twitter.jpeg" alt="Twitter"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="linkedin.jpeg" alt="LinkedIn"></a>
     </div>
 </header>
 
