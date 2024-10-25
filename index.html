@@ -41,6 +41,14 @@
         }
 
         /* Navigation Menu */
+        .menu-bar {
+            border: 2px solid #ffcc00; /* Border around the menu bar */
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 15px 0;
+        }
+
         .menu-bar ul {
             list-style: none;
             display: flex;
@@ -49,17 +57,25 @@
             justify-content: center;
         }
 
+        .menu-bar ul li {
+            position: relative; /* To position the hover effect */
+        }
+
         .menu-bar ul li a {
             color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             font-weight: 700;
-            font-size: 1em;
-            transition: color 0.3s;
+            font-size: 1.1em;
             padding: 10px 15px;
+            border: 2px solid transparent; /* Transparent border for hover effect */
+            border-radius: 5px;
+            transition: color 0.3s, border-color 0.3s, background-color 0.3s;
         }
 
         .menu-bar ul li a:hover {
-            color: #ffcc00;
+            color: #000; /* Change text color on hover */
+            background-color: #ffcc00; /* Highlight background on hover */
+            border-color: #ffcc00; /* Change border color on hover */
         }
 
         /* Social Icons */
@@ -247,23 +263,14 @@
 
 <script>
     function showSection(sectionId) {
-        // Hide all sections
         const sections = document.querySelectorAll('section');
         sections.forEach(section => {
-            section.style.display = 'none';
+            section.style.display = section.id === sectionId ? 'block' : 'none';
         });
-        
-        // Show the selected section
-        const activeSection = document.getElementById(sectionId);
-        if (activeSection) {
-            activeSection.style.display = 'block';
-        }
     }
 
-    // Optionally show the home section by default
-    document.addEventListener('DOMContentLoaded', () => {
-        showSection('home');
-    });
+    // Show the home section by default
+    showSection('home');
 </script>
 
 </body>
