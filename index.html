@@ -12,24 +12,22 @@
             margin: 0;
             padding: 0;
             background-image: url('pexels-chris-f-38966-27585575.jpg');
-            background-size: fixed;
+            background-size: cover; /* Changed to cover for better fit */
             background-position: center;
             background-repeat: no-repeat;
             color: #333; /* Dark text for readability */
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.9); /* Dark blue */
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
-            padding: 10px;
+            padding: 15px; /* Increased padding for mobile */
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Stack items on mobile */
             align-items: center;
             border-bottom: none;
-            flex-wrap: wrap;
-            position: relative; /* Enable positioning for absolute elements */
             background-image: url('0lzi4jzk.png');
-            background-size: fixed;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
@@ -39,19 +37,21 @@
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap; /* Wrap menu items */
+            justify-content: center; /* Center items */
         }
 
         .menu-bar ul li {
-            margin: 0 15px;
+            margin: 0 10px; /* Reduced margin for mobile */
         }
 
         .menu-bar ul li a {
             color: white;
             text-decoration: none;
             padding: 10px;
-            font-size: 0.7em;
-            font-weight: 700; /* Bold links */
-            transition: color 0.3s; /* Transition for hover effect */
+            font-size: 0.9em; /* Slightly smaller */
+            font-weight: 700;
+            transition: color 0.3s;
         }
 
         .menu-bar ul li a:hover {
@@ -66,23 +66,19 @@
             font-weight: bold;
             border: 2px solid rgba(255, 255, 255, 0.5);
             border-radius: 10px;
-            padding: 15px;
+            padding: 10px; /* Reduced padding */
             background-color: rgba(0, 0, 0, 0.5);
-            position: absolute; /* Position it at the top right */
-            center: 20px;
-            top: 80px;
         }
 
         .social-icons {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            flex-basis: 100%;
-            margin-bottom: 10px;
+            justify-content: center; /* Center social icons */
+            margin: 10px 0; /* Reduced margin */
         }
 
         .social-icons a {
-            margin: 0 10px;
+            margin: 0 5px; /* Reduced margin */
         }
 
         .social-icons img {
@@ -92,76 +88,71 @@
         }
 
         .social-icons img:hover {
-            transform: scale(1.2); /* Slightly larger on hover */
+            transform: scale(1.1); /* Slightly larger on hover */
         }
 
         .header-title {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px; /* Reduced margin */
         }
 
         header h1 {
             margin: 0;
-            font-size: 3.0em; /* Larger for impact */
+            font-size: 2.5em; /* Smaller for mobile */
             font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            animation: pulse 2s infinite; /* Pulse animation */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Reduced shadow for mobile */
+            animation: pulse 2s infinite;
         }
 
-        /* Pulse Animation */
         @keyframes pulse {
             0% {
                 transform: scale(1);
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             }
             50% {
                 transform: scale(1.05);
-                text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+                text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
             }
             100% {
                 transform: scale(1);
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             }
         }
 
         h3 {
-            margin: 10px 0;
-            font-weight: 400; /* Normal weight */
-            font-size: 1.1em; /* Smaller */
+            margin: 5px 0; /* Reduced margin */
+            font-weight: 400;
+            font-size: 1em; /* Smaller */
             font-style: italic;
         }
 
         section {
-            padding: 40px;
+            padding: 20px; /* Reduced padding */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            background-color: rgba(0, 0, 255, 0.9); /* Light background */
-            margin: 30px auto; /* Center the section */
+            background-color: rgba(0, 0, 255, 0.8); /* Light background */
+            margin: 20px auto; /* Center the section */
             text-align: center; /* Center text within sections */
-            max-width: 800px; /* Limit width */
+            max-width: 90%; /* Responsive max width */
             color: white;
-            transition: transform 0.3s ease, background-color 0.3s; /* Smooth transition */
+            transition: transform 0.3s ease, background-color 0.3s;
         }
 
         section:hover {
-            transform: scale(1.0);
-            background-color: rgba(0, 255, 255, 1); /* Highlight on hover */
-        }
-
-        #home, #services, #about, #contact {
-            background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+            transform: scale(1.01); /* Slight zoom effect */
+            background-color: rgba(0, 255, 255, 0.9);
         }
 
         h2 {
             color: #007bff; /* Bright blue */
-            font-size: 2.8em; /* Larger */
+            font-size: 2em; /* Smaller for mobile */
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-            margin-bottom: 30px; /* Spacing below headings */
+            margin-bottom: 20px; /* Spacing below headings */
         }
 
         p, ul li {
-            font-size: 1.2em; /* Slightly smaller for readability */
-            line-height: 1.6; /* Increased line height for readability */
+            font-size: 1em; /* Slightly smaller for readability */
+            line-height: 1.4; /* Increased line height */
         }
 
         ul {
@@ -170,32 +161,32 @@
         }
 
         ul li {
-            margin: 15px 0;
+            margin: 10px 0; /* Reduced margin */
         }
 
         ul li .icon {
-            margin-right: 10px;
-            color: #007bff; /* Bright icon color */
+            margin-right: 5px; /* Reduced margin */
+            color: #007bff;
         }
 
         .image-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 20px 0;
+            margin: 10px 0; /* Reduced margin */
         }
 
         .image-container img {
-            width: auto;
-            height: 200px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100px; /* Fixed width for mobile */
+            height: auto;
+            margin: 5px; /* Reduced margin */
+            border-radius: 5px; /* Smaller radius */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease;
         }
 
         .image-container img:hover {
-            transform: scale(0.8); /* Zoom on hover */
+            transform: scale(1.1); /* Zoom on hover */
         }
 
         .form-container {
@@ -203,12 +194,12 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 20px;
-            margin: 20px auto;
+            padding: 15px; /* Reduced padding */
+            margin: 15px auto; /* Reduced margin */
             background-color: rgba(0, 0, 0, 0.9);
             border-radius: 10px;
             width: 100%;
-            max-width: 600px;
+            max-width: 90%; /* Responsive max width */
             box-shadow: 0 4px 10px rgba(0, 225, 225, 0.9);
         }
 
@@ -217,7 +208,7 @@
         }
 
         label {
-            font-size: 1.2em;
+            font-size: 1em; /* Smaller for mobile */
             color: #007bff;
             margin-top: 10px;
         }
@@ -229,7 +220,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1em;
-            transition: border 0.3s; /* Transition for border */
+            transition: border 0.3s;
         }
 
         input:focus, textarea:focus {
@@ -237,14 +228,14 @@
         }
 
         button {
-            background-color: #007bff; /* Primary button color */
+            background-color: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 15px; /* Adjusted padding */
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2em;
-            transition: background-color 0.3s; /* Transition for hover */
+            font-size: 1em; /* Smaller font size */
+            transition: background-color 0.3s;
         }
 
         button:hover {
@@ -252,132 +243,142 @@
         }
 
         footer {
-            background-color: rgba(0, 0, 0.5, 0.2); /* Dark teal with transparency */
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
-            padding: 10px;
+            padding: 15px; /* Adjusted padding */
             color: white;
             position: relative;
             margin-top: 10px;
             background-image: url('pexels-violetta-b-1460865357-28435299.jpg');
-            background-size: fixed;
+            background-size: cover; /* Changed to cover */
             background-position: center;
             background-repeat: no-repeat;
         }
 
         .footer-text {
-            margin: 10px 0;
+            margin: 5px 0; /* Reduced margin */
         }
 
         .contact-details p {
             margin: 5px 0;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em; /* Smaller font size on mobile */
+            }
+            h2 {
+                font-size: 1.5em; /* Smaller heading */
+            }
+            section {
+                padding: 15px; /* Less padding */
+                font-size: 0.9em; /* Smaller font size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em; /* Even smaller for small screens */
+            }
+            h2 {
+                font-size: 1.2em; /* Adjusted heading */
+            }
+            .social-icons img {
+                width: 25px; /* Smaller icons for mobile */
+            }
+            button {
+                padding: 8px 12px; /* Smaller button */
+            }
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">About</a></li>
+                <li><a href="#section3">Projects</a></li>
+                <li><a href="#section4">Contact</a></li>
+            </ul>
+        </div>
+        <div class="current-date-time" id="currentDateTime"></div>
+        <div class="header-title">
+            <h1>Tumelo Jack Dibate</h1>
+            <h3>Programming Enthusiast</h3>
+        </div>
+        <div class="social-icons">
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <img src="twitter_icon.png" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                <img src="linkedin_icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yourprofile" target="_blank">
+                <img src="github_icon.png" alt="GitHub">
+            </a>
+        </div>
+    </header>
 
-<header>
-    <div class="header-title">
-        <h1>Tumelo Jack Dibate</h1>
-        <div class="current-date-time" id="current-date-time"></div>
-    </div>
-    <nav class="menu-bar">
+    <section id="section1">
+        <h2>Welcome!</h2>
+        <p>Welcome to my personal website where I share my projects and ideas.</p>
+    </section>
+
+    <section id="section2">
+        <h2>About Me</h2>
+        <p>I'm a programming enthusiast with a passion for web development and design.</p>
+    </section>
+
+    <section id="section3">
+        <h2>Projects</h2>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>Project 1: <a href="project1_link">Project Link</a></li>
+            <li>Project 2: <a href="project2_link">Project Link</a></li>
+            <li>Project 3: <a href="project3_link">Project Link</a></li>
         </ul>
-    </nav>
-    <div class="social-icons">
-        <a href="https://twitter.com/"><img src="twitter.jpeg" alt="Twitter"></a>
-        <a href="https://facebook.com/"><img src="facebook.jpeg" alt="Facebook"></a>
-        <a href="https://instagram.com/"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://linkedin.com/"><img src="linkedin.jpeg" alt="Linkedin"></a>
-        <a href="https://whatsapp.com/"><img src="whatsapp.jpeg" alt="Whatsapp"></a>
-    </div>
-</header>
+        <div class="image-container">
+            <img src="image1.png" alt="Project 1">
+            <img src="image2.png" alt="Project 2">
+            <img src="image3.png" alt="Project 3">
+        </div>
+    </section>
 
-<!-- Home Section -->
-<section id="home">
-    <h2>🎉 Welcome to My Portfolio</h2>
-    <p>Explore my work, services, and projects that showcase my skills and creativity!</p>
-</section>
+    <section id="section4">
+        <h2>Contact Me</h2>
+        <div class="form-container">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
 
-<!-- Services Section -->
-<section id="services">
-    <h2>🚀 Services Offered</h2>
-    <ul>
-        <li><span class="icon">🎶</span> <strong>Music Artists:</strong> Promote your music online.</li>
-        <li><span class="icon">🎨</span> <strong>Portfolio Websites:</strong> Present your work beautifully.</li>
-        <li><span class="icon">📸</span> <strong>Photography:</strong> Capture your moments online.</li>
-        <li><span class="icon">🛍️</span> <strong>Ecommerce:</strong> Start your online store.</li>
-        <li><span class="icon">💇‍♀️</span> <strong>Salon:</strong> Attract clients with an engaging website.</li>
-    </ul>
-    <div class="image-container">
-        <img src="music.png" alt="Music Artists">
-        <img src="cv.jpeg" alt="Portfolio">
-        <img src="photographer.png" alt="Photography">
-        <img src="ecommerce.jpeg" alt="Ecommerce">
-        <img src="salon.png" alt="Salon">
-    </div>
-</section>
+    <footer>
+        <div class="footer-text">
+            <p>&copy; 2024 Tumelo Jack Dibate. All rights reserved.</p>
+        </div>
+        <div class="contact-details">
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </footer>
 
-<!-- About Section -->
-<section id="about">
-    <h2>✨ About Us</h2>
-    <p>We are a team of passionate designers committed to bringing your vision to life. With years of experience, we understand what it takes to create stunning and functional websites.</p>
-    <div class="image-container">
-        <img src="catering.png" alt="Catering">
-        <img src="food.png" alt="Food">
-        <img src="creators.png" alt="Creators">
-        <img src="realestate.png" alt="Real Estate">
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-    <h2>📧 Get In Touch</h2>
-    <p>Contact us via email: <a href="mailto:dibatets@gmail.com">dibatets@gmail.com</a></p>
-    <p>Or visit our website: <a href="https://tumelodibate.github.io/?fbclid=IwY2xjawGElDhleHRuA2FlbQIxMAABHfRqtOmTTW1hMjXaI76RUfndWo8UPCOSj0Xtc0ESt5PHaHaDMn6eNOvT0Q_aem_8BHaO25Bj5nxMdLQmJFt-A">www.tumelodibate.github.io</a></p>
-</section>
-
-<!-- Form Section -->
-<section id="form">
-    <h2>📝 Contact Us</h2>
-    <div class="form-container">
-        <form action="https://formspree.io/f/xnqznjqn" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    
-    <div class="contact-details">
-        
-        <p>Soshanguve, Pretoria , South Africa</p>
-        <p class="footer-text">© 2024 Tumelo Dibate. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<script>
-    function updateDateTime() {
-        const now = new Date();
-        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
-        document.getElementById('current-date-time').textContent = now.toLocaleString('en-US', options);
-    }
-    updateDateTime();
-    setInterval(updateDateTime, 1000); // Update every second
-</script>
-
+    <script>
+        // JavaScript to display current date and time
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            document.getElementById('currentDateTime').innerText = now.toLocaleDateString('en-US', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initial call
+    </script>
 </body>
 </html>
