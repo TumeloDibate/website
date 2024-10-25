@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Logo Design">
+    <link rel="canonical" href="https://logodesign.ai/create/edit-logo/W8UO3FA52J">
+    <meta name="description" content="Logo Design is an online logo generator powered by ai. In just a few seconds you can have your own logo in all formats and sizes.">
+    <meta name="keywords" content="generate logo, logo generator, ai logo generator, logo design, ai logo design, logo ai, generate logo with ai" />
+    <meta itemprop="image" content="https://logodesign.ai/images/logodesign-background.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://logodesign.ai/create/edit-logo/W8UO3FA52J">
+    <meta property="og:title" content="Logo Design | Design Your Own Beautiful Logo">
+    <meta property="og:description" content="Logo Design is an online logo generator powered by ai. In just a few seconds you can have your own logo in all formats and sizes.">
+    <meta property="og:image" content="https://logodesign.ai/images/logodesign-background.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://logodesign.ai/create/edit-logo/W8UO3FA52J">
+    <meta property="twitter:title" content="Logo Design | Design Your Own Beautiful Logo">
+    <meta property="twitter:description" content="Logo Design is an online logo generator powered by ai. In just a few seconds you can have your own logo in all formats and sizes.">
+    <meta property="twitter:image" content="https://logodesign.ai/images/logodesign-background.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="https://logodesign.ai/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://logodesign.ai/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://logodesign.ai/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://logodesign.ai/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://logodesign.ai/favicon/favicon-32x32.png" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fontawesome v6 -->
+    <link type="text/css" href="https://logodesign.ai/fontawesome-free-6.6.0-web/css/all.css" rel="stylesheet">
+
+    <!-- Prism -->
+    <link type="text/css" href="https://logodesign.ai/node_modules/prismjs/themes/prism.css" rel="stylesheet">
+
+    <!-- Rocket CSS -->
+    <link type="text/css" href="https://logodesign.ai/css/rocket.css" rel="stylesheet">
+
+    <script src="https://logodesign.ai/vue-scripts/axios.min.js"></script>
+
+    <!-- LOTTIE -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+        <!-- preload images -->
+    <!-- <link rel="preload" as="image" href="https://logodesign.ai/create/designs/1.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/2.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/3.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/4.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/5.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/6.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/7.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/8.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/9.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/10.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/11.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/12.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/13.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/14.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/15.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/16.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/17.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/designs/18.png"> -->
+    <!-- json files -->
+    <link rel="preload" as="fetch" href="https://logodesign.ai/industries/industries.json" type="application/json" crossorigin="anonymous">
+    <!-- loader -->
+    <link rel="preload" as="fetch" href="https://logodesign.ai/lottie/logo-design-loading.json">
+        <!-- mockups -->
+    <link rel="preload" as="image" href="https://logodesign.ai/create/mockups/mockup-9.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/mockups/mockup-2.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/mockups/mockup-13.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/mockups/mockup-14.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/mockups/mockup-10.png">
+    <link rel="preload" as="image" href="https://logodesign.ai/create/mockups/mockup-4.png">
+    <!-- loader -->
+    <link rel="preload" as="image" href="https://logodesign.ai/create/loader.gif">
+    <!-- json files -->
+    <link rel="preload" as="fetch" href="https://logodesign.ai/font-placeholders/placeholders.json" type="application/json" crossorigin="anonymous">
+    <link rel="preload" as="fetch" href="https://logodesign.ai/background-colors/background-colors.json" type="application/json" crossorigin="anonymous">
+
+    <!-- Core -->
+    <script src="https://logodesign.ai/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://logodesign.ai/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://logodesign.ai/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://logodesign.ai/node_modules/headroom.js/dist/headroom.min.js"></script> -->
+
+    <!-- Vendor JS -->
+    <script src="https://logodesign.ai/node_modules/countup.js/dist/countUp.min.js"></script>
+    <script src="https://logodesign.ai/node_modules/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="https://logodesign.ai/node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://logodesign.ai/node_modules/prismjs/prism.js"></script>
+
+    <!-- Rocket JS -->
+    <script src="https://logodesign.ai/assets/js/rocket.js"></script>
+
+    <!-- WHOSAMUNG -->
+    <div style="display:none"><img src="https://whos.amung.us/swidget/logodesign.png"></div>
+
+    <!-- PLAUSIBLE -->
+    <script defer data-domain="logodesign.ai" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Default Statcounter code for Logo Design https://logodesign.ai -->
+    <!-- <script type="text/javascript">
+    var sc_project=13007654; 
+    var sc_invisible=1; 
+    var sc_security="5e486f58"; 
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+    Statcounter" href="https://statcounter.com/" target="_blank"><img
+    class="statcounter" src="https://c.statcounter.com/13007654/0/5e486f58/1/"
+    alt="Web Analytics Made Easy - Statcounter"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> -->
+    <!-- End of Statcounter Code -->
+
+    <!-- GOOGLE AUTH URL -->
+    <script> var g_authurl = "https://accounts.google.com/o/oauth2/v2/auth?response_type=code&access_type=online&client_id=268752879634-447mqsk6s6o5p3vpajndbv6cc8eqc7d2.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Flogodesign.ai%2Fg-callback.php&state&scope=email%20profile&approval_prompt=auto"; </script>
+
+  </head>
+  <body style="background: #f2f5f9!important;">
+    <div id="app"></div>
+    <script src="/create/dist/build.js?37"></script>
+  </body>
+</html>
