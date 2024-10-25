@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,279 +7,205 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            margin: 0;
+            color: #333;
+            background: url('pexels-chris-f-38966-27585575.jpg') center/cover no-repeat;
             padding: 0;
-            background-image: url('pexels-chris-f-38966-27585575.jpg');
-            background-size: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #333; /* Dark text for readability */
+            margin: 0;
+            line-height: 1.6;
         }
 
+        /* Header Styling */
         header {
-            background-color: rgba(0, 0, 0, 0.9); /* Dark blue */
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
-            padding: 10px;
+            padding: 10px 15px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            border-bottom: none;
-            flex-wrap: wrap;
-            position: relative; /* Enable positioning for absolute elements */
-            background-image: url('0lzi4jzk.png');
-            background-size: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+            text-align: center;
         }
 
+        header h1 {
+            font-size: 2em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navigation Menu */
         .menu-bar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+            list-style: none;
             display: flex;
-        }
-
-        .menu-bar ul li {
-            margin: 0 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
         }
 
         .menu-bar ul li a {
             color: white;
             text-decoration: none;
-            padding: 10px;
-            font-size: 0.7em;
-            font-weight: 700; /* Bold links */
-            transition: color 0.3s; /* Transition for hover effect */
+            font-weight: 700;
+            font-size: 1em;
+            transition: color 0.3s;
         }
 
         .menu-bar ul li a:hover {
-            color: #ffcc00; /* Bright color on hover */
+            color: #ffcc00;
         }
 
-        .current-date-time {
-            font-size: 1.0em;
-            color: white;
-            text-align: center;
-            margin-top: 10px;
-            font-weight: bold;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute; /* Position it at the top right */
-            center: 20px;
-            top: 80px;
-        }
-
+        /* Social Icons */
         .social-icons {
             display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex-basis: 100%;
-            margin-bottom: 10px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
+            gap: 10px;
+            margin-top: 10px;
         }
 
         .social-icons img {
-            width: 30px;
-            height: auto;
-            transition: transform 0.3s ease;
+            width: 25px;
+            transition: transform 0.3s;
         }
 
         .social-icons img:hover {
-            transform: scale(1.2); /* Slightly larger on hover */
+            transform: scale(1.2);
         }
 
-        .header-title {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3.0em; /* Larger for impact */
-            font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            animation: pulse 2s infinite; /* Pulse animation */
-        }
-
-        /* Pulse Animation */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            }
-            50% {
-                transform: scale(1.05);
-                text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-            }
-            100% {
-                transform: scale(1);
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            }
-        }
-
-        h3 {
-            margin: 10px 0;
-            font-weight: 400; /* Normal weight */
-            font-size: 1.1em; /* Smaller */
-            font-style: italic;
-        }
-
+        /* Responsive Section Styles */
         section {
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            background-color: rgba(0, 0, 255, 0.9); /* Light background */
-            margin: 30px auto; /* Center the section */
-            text-align: center; /* Center text within sections */
-            max-width: 800px; /* Limit width */
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            text-align: center;
             color: white;
-            transition: transform 0.3s ease, background-color 0.3s; /* Smooth transition */
-        }
-
-        section:hover {
-            transform: scale(1.0);
-            background-color: rgba(0, 255, 255, 1); /* Highlight on hover */
-        }
-
-        #home, #services, #about, #contact {
-            background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
-            color: #007bff; /* Bright blue */
-            font-size: 2.8em; /* Larger */
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-            margin-bottom: 30px; /* Spacing below headings */
-        }
-
-        p, ul li {
-            font-size: 1.2em; /* Slightly smaller for readability */
-            line-height: 1.6; /* Increased line height for readability */
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 15px 0;
-        }
-
-        ul li .icon {
-            margin-right: 10px;
-            color: #007bff; /* Bright icon color */
+            color: #007bff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
 
         .image-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 10px;
             margin: 20px 0;
         }
 
         .image-container img {
-            width: auto;
-            height: 200px;
-            margin: 10px;
+            width: 100px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s;
         }
 
         .image-container img:hover {
-            transform: scale(0.8); /* Zoom on hover */
+            transform: scale(1.1);
         }
 
+        /* Form Styles */
         .form-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-            margin: 20px auto;
             background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
             border-radius: 10px;
-            width: 100%;
-            max-width: 600px;
-            box-shadow: 0 4px 10px rgba(0, 225, 225, 0.9);
+            max-width: 500px;
+            margin: 20px auto;
         }
 
-        form {
+        form label, form input, form textarea, form button {
+            display: block;
             width: 100%;
+            margin-bottom: 10px;
+            font-size: 1em;
         }
 
-        label {
-            font-size: 1.2em;
-            color: #007bff;
-            margin-top: 10px;
-        }
-
-        input, textarea {
-            width: 100%;
+        form input, form textarea {
             padding: 10px;
-            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1em;
-            transition: border 0.3s; /* Transition for border */
         }
 
-        input:focus, textarea:focus {
-            border: 2px solid #007bff; /* Highlight on focus */
-        }
-
-        button {
-            background-color: #007bff; /* Primary button color */
+        form button {
+            background-color: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-            transition: background-color 0.3s; /* Transition for hover */
+            transition: background-color 0.3s;
         }
 
-        button:hover {
-            background-color: #0056b3; /* Darker shade on hover */
+        form button:hover {
+            background-color: #0056b3;
         }
 
+        /* Footer */
         footer {
-            background-color: rgba(0, 0, 0.5, 0.2); /* Dark teal with transparency */
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
             text-align: center;
             padding: 10px;
-            color: white;
-            position: relative;
-            margin-top: 10px;
-            background-image: url('pexels-violetta-b-1460865357-28435299.jpg');
-            background-size: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+            font-size: 0.9em;
         }
 
-        .footer-text {
-            margin: 10px 0;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .menu-bar ul li a {
+                font-size: 0.9em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .image-container img {
+                width: 80px;
+            }
+
+            form label, form input, form textarea, form button {
+                font-size: 0.9em;
+            }
         }
 
-        .contact-details p {
-            margin: 5px 0;
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+
+            .social-icons img {
+                width: 20px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .image-container img {
+                width: 60px;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-title">
-        <h1>Tumelo Jack Dibate</h1>
-        <div class="current-date-time" id="current-date-time"></div>
-    </div>
+    <h1>Tumelo Jack Dibate</h1>
     <nav class="menu-bar">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -290,61 +215,45 @@
         </ul>
     </nav>
     <div class="social-icons">
-        <a href="https://twitter.com/"><img src="twitter.jpeg" alt="Twitter"></a>
-        <a href="https://facebook.com/"><img src="facebook.jpeg" alt="Facebook"></a>
-        <a href="https://instagram.com/"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://linkedin.com/"><img src="linkedin.jpeg" alt="Linkedin"></a>
-        <a href="https://whatsapp.com/"><img src="whatsapp.jpeg" alt="Whatsapp"></a>
+        <a href="#"><img src="twitter.jpeg" alt="Twitter"></a>
+        <a href="#"><img src="facebook.jpeg" alt="Facebook"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="linkedin.jpeg" alt="Linkedin"></a>
     </div>
 </header>
 
-<!-- Home Section -->
 <section id="home">
-    <h2>🎉 Welcome to My Portfolio</h2>
+    <h2>Welcome to My Portfolio</h2>
     <p>Explore my work, services, and projects that showcase my skills and creativity!</p>
 </section>
 
-<!-- Services Section -->
 <section id="services">
-    <h2>🚀 Services Offered</h2>
+    <h2>Services Offered</h2>
     <ul>
-        <li><span class="icon">🎶</span> <strong>Music Artists:</strong> Promote your music online.</li>
-        <li><span class="icon">🎨</span> <strong>Portfolio Websites:</strong> Present your work beautifully.</li>
-        <li><span class="icon">📸</span> <strong>Photography:</strong> Capture your moments online.</li>
-        <li><span class="icon">🛍️</span> <strong>Ecommerce:</strong> Start your online store.</li>
-        <li><span class="icon">💇‍♀️</span> <strong>Salon:</strong> Attract clients with an engaging website.</li>
+        <li>Promote your music online</li>
+        <li>Portfolio websites for creators</li>
+        <li>Online photography portfolios</li>
+        <li>Start your e-commerce store</li>
+        <li>Salon website development</li>
     </ul>
     <div class="image-container">
         <img src="music.png" alt="Music Artists">
         <img src="cv.jpeg" alt="Portfolio">
-        <img src="photographer.png" alt="Photography">
-        <img src="ecommerce.jpeg" alt="Ecommerce">
-        <img src="salon.png" alt="Salon">
     </div>
 </section>
 
-<!-- About Section -->
 <section id="about">
-    <h2>✨ About Us</h2>
-    <p>We are a team of passionate designers committed to bringing your vision to life. With years of experience, we understand what it takes to create stunning and functional websites.</p>
-    <div class="image-container">
-        <img src="catering.png" alt="Catering">
-        <img src="food.png" alt="Food">
-        <img src="creators.png" alt="Creators">
-        <img src="realestate.png" alt="Real Estate">
-    </div>
+    <h2>About Us</h2>
+    <p>We are a team of designers committed to bringing your vision to life through beautiful and functional websites.</p>
 </section>
 
-<!-- Contact Section -->
 <section id="contact">
-    <h2>📧 Get In Touch</h2>
-    <p>Contact us via email: <a href="mailto:dibatets@gmail.com">dibatets@gmail.com</a></p>
-    <p>Or visit our website: <a href="https://tumelodibate.github.io/?fbclid=IwY2xjawGElDhleHRuA2FlbQIxMAABHfRqtOmTTW1hMjXaI76RUfndWo8UPCOSj0Xtc0ESt5PHaHaDMn6eNOvT0Q_aem_8BHaO25Bj5nxMdLQmJFt-A">www.tumelodibate.github.io</a></p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:dibatets@gmail.com">dibatets@gmail.com</a></p>
 </section>
 
-<!-- Form Section -->
 <section id="form">
-    <h2>📝 Contact Us</h2>
+    <h2>Contact Us</h2>
     <div class="form-container">
         <form action="https://formspree.io/f/xnqznjqn" method="POST">
             <label for="name">Name:</label>
@@ -362,23 +271,9 @@
 </section>
 
 <footer>
-    
-    <div class="contact-details">
-        
-        <p>Soshanguve, Pretoria , South Africa</p>
-        <p class="footer-text">© 2024 Tumelo Dibate. All Rights Reserved.</p>
-    </div>
+    <p>Soshanguve, Pretoria, South Africa</p>
+    <p>© 2024 Tumelo Dibate. All Rights Reserved.</p>
 </footer>
-
-<script>
-    function updateDateTime() {
-        const now = new Date();
-        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
-        document.getElementById('current-date-time').textContent = now.toLocaleString('en-US', options);
-    }
-    updateDateTime();
-    setInterval(updateDateTime, 1000); // Update every second
-</script>
 
 </body>
 </html>
