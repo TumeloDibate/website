@@ -18,7 +18,8 @@
         body {
             font-family: 'Roboto', sans-serif;
             color: rgba(51, 51, 51, 0.9);
-            background: url('pexels-chris-f-38966-27585575.jpg') center/cover no-repeat;
+            background: url('pexels-chris-f-38966-27585575.jpg') center center/cover no-repeat; /* Adjusted properties */
+            height: 100vh; /* Full height */
             padding: 0;
             margin: 0;
             line-height: 1.6;
@@ -30,14 +31,12 @@
             color: rgba(255, 255, 255, 0.9);
             padding: 10px 5%;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            text-align: center;
+            justify-content: space-between;
         }
 
-        header h1 {
-            font-size: 2.5em;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        .logo {
+            width: 150px; /* Adjust logo size */
         }
 
         /* Navigation Menu */
@@ -52,13 +51,12 @@
         .menu-bar ul {
             list-style: none;
             display: flex;
-            flex-wrap: wrap;
             gap: 15px;
             justify-content: center;
         }
 
         .menu-bar ul li {
-            position: relative; /* To position the hover effect */
+            position: relative;
         }
 
         .menu-bar ul li a {
@@ -73,25 +71,31 @@
         }
 
         .menu-bar ul li a:hover {
-            color: #000; /* Change text color on hover */
-            background-color: #ffcc00; /* Highlight background on hover */
-            border-color: #ffcc00; /* Change border color on hover */
+            color: #000;
+            background-color: #ffcc00;
+            border-color: #ffcc00;
         }
 
-        /* Social Icons */
-        .social-icons {
+        /* Welcome Section */
+        #home {
             display: flex;
-            gap: 10px;
-            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .social-icons img {
-            width: 30px;
-            transition: transform 0.3s;
+        #home h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
         }
 
-        .social-icons img:hover {
-            transform: scale(1.2);
+        #home p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
 
         /* Section Styles */
@@ -105,12 +109,6 @@
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.5);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        h2 {
-            color: #007bff;
-            font-size: 2em;
-            margin-bottom: 20px;
         }
 
         /* Form Styles */
@@ -155,34 +153,37 @@
             text-align: center;
             padding: 10px;
             font-size: 0.9em;
+            position: relative; /* Position for sticky footer */
+            bottom: 0;
+            width: 100%;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
             .menu-bar ul li a {
                 font-size: 0.9em;
             }
 
-            h2 {
-                font-size: 1.5em;
+            #home h2 {
+                font-size: 2em;
+            }
+
+            #home p {
+                font-size: 1.2em;
             }
         }
 
         @media (max-width: 480px) {
-            header h1 {
+            .logo {
+                width: 100px; /* Adjust logo size on smaller screens */
+            }
+
+            #home h2 {
                 font-size: 1.5em;
             }
 
-            .social-icons img {
-                width: 25px;
-            }
-
-            h2 {
-                font-size: 1.2em;
+            #home p {
+                font-size: 1em;
             }
         }
     </style>
@@ -190,7 +191,7 @@
 <body>
 
 <header>
-    <h1>Tumelo Jack Dibate</h1>
+    <img src="tumi.png" alt="Logo" class="logo"> <!-- Replace with your logo -->
     <nav class="menu-bar">
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
@@ -210,7 +211,7 @@
 
 <section id="home">
     <h2>Welcome to My Portfolio</h2>
-    <p>Explore my work, services, and projects that showcase my skills and creativity!</p>
+    <p>Your vision brought to life through exceptional design.</p>
 </section>
 
 <section id="about">
@@ -230,6 +231,8 @@
     <div class="image-container">
         <img src="music.png" alt="Music Artists">
         <img src="cv.jpeg" alt="Portfolio">
+        <img src="food.png" alt="Portfolio">
+        <img src="salon.png" alt="Portfolio">
     </div>
 </section>
 
