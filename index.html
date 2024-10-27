@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tumelo Jack Dibate</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Update the Google Fonts link to Ubuntu -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-   /* Basic Reset */
+        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
@@ -17,7 +19,7 @@
 
         /* General Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Ubuntu', sans-serif; /* Change font to Ubuntu */
             color: rgba(51, 51, 51, 0.9);
             background: url('station.jpg') center center/cover no-repeat;
             height: 100vh;
@@ -36,9 +38,13 @@
             flex-wrap: wrap;
         } 
         
-
-        .logo {
-            width: 100px; /* Adjust logo size */
+        header h1 {
+            font-size: 2em; /* Adjust this size as needed */
+            border: 2px solid #ffcc00; /* Border with menu hover color */
+            padding: 10px; /* Add padding for better spacing */
+            background-color: rgba(255, 204, 0, 0.2); /* Light background matching hover color */
+            border-radius: 5px; /* Rounded corners for the border */
+            margin: 0; /* Remove margin for alignment */
         }
 
         /* Navigation Menu */
@@ -101,11 +107,6 @@
         #home p {
             font-size: 1.1em;
             margin-bottom: 15px;
-        }
-        #home p1{
-            font-size: 0.5;
-            margin-bottom: 30px;
-            font-text: talic;
         }
 
         /* Section Styles */
@@ -203,7 +204,7 @@
 <body>
 
 <header>
-    <h1 >Tumelo Dev</h1> <!-- Replace with your logo -->
+    <h1>Tumelo Dev</h1> <!-- Replace with your logo -->
     <nav class="menu-bar">
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
@@ -216,12 +217,10 @@
 
 <main>
     <section id="home">
-       
         <h2><b>Welcome to Tumelo Website Services</b><br></h2>
         <p1><i>Crafting Websites, Empowering Businesses.</i><br></p1>
- 
         <p>Our Mission is to help small businesses shine online with custom websites<br>
-         that make a big impact by bringing your vision to life through exceptional design.</p> 
+        that make a big impact by bringing your vision to life through exceptional design.</p> 
         <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image">
     </section>
 
@@ -238,29 +237,26 @@
     <section id="services">
         <h2><b>Services Offered</b> </h2>
         <ul>
-            <li>Artist and Music Promotion Website</li>
-            <li>Portfolio website</li>
-            <li>Online photography portfolios</li>
-            <li>Start your e-commerce store</li>
-            <li>Salon, and Make up Artist website development</li>
-            <li>Catering/Food services website development</li>
-            <li>Kota menu website development</li>
-            <li>And more..............</li>
-            
+            <li><b>Website Design & Development:</b> Custom websites tailored to your business needs.</li>
+            <li><b>Responsive Design:</b> Ensure your site looks great on all devices.</li>
+            <li><b>SEO Optimization:</b> Improve your site’s visibility on search engines.</li>
+            <li><b>E-commerce Solutions:</b> Set up your online store with ease.</li>
+            <li><b>Maintenance & Support:</b> Ongoing support to keep your website running smoothly.</li>
         </ul>
     </section>
+
     <section id="form">
-        <h2><b>Contact </b></h2>
+        <h2><b>Contact Us</b></h2>
         <div class="form-container">
-            <form action="https://formspree.io/f/mpwzwbaq" method="POST">
+            <form action="your-server-side-script" method="post">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="email" id="email" name="email" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Submit</button>
             </form>
@@ -269,17 +265,18 @@
 </main>
 
 <footer>
-    <p>Soshanguve, Pretoria, South Africa</p>
-    <p>© 2024 Tumelo Dibate. All Rights Reserved.</p>
+    <p>&copy; 2024 Tumelo Jack Dibate. All rights reserved.</p>
 </footer>
 
 <script>
-    const sections = document.querySelectorAll('section');
-
     function showSection(sectionId) {
-        sections.forEach(section => {
-            section.style.display = section.id === sectionId ? 'block' : 'none';
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
         });
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
     }
 
     // Show the home section by default
