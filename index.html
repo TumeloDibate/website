@@ -18,7 +18,7 @@
         body {
             font-family: 'Roboto', sans-serif;
             color: rgba(51, 51, 51, 0.9);
-            background: url('station.jpg') center center/cover no-repeat;
+            background: #333; /* Fallback background color */
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -71,27 +71,83 @@
             background-color: #ffcc00;
         }
 
-        /* Main Welcome Section */
+        /* Home Section Enhancements */
         #home {
-            flex: 1; /* Take remaining space */
+            flex: 1;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2;
+            color: #fff;
             text-align: center;
-            color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            max-width: 600px;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         #home h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         #home p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design Adjustments */
+        @media (max-width: 768px) {
+            #home h2 {
+                font-size: 2.2em;
+            }
+
+            #home p {
+                font-size: 1.1em;
+            }
+
+            .logo {
+                width: 120px; /* Smaller logo on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            #home h2 {
+                font-size: 1.8em;
+            }
+
+            #home p {
+                font-size: 1em;
+            }
         }
 
         /* Section Styles */
@@ -119,7 +175,7 @@
         form label {
             color: rgba(0, 0, 0, 0.8);
             margin-bottom: 5px;
-            display: block; /* Ensure label is on its own line */
+            display: block;
         }
 
         form input, form textarea {
@@ -127,8 +183,8 @@
             border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             font-size: 1em;
-            width: 100%; /* Full width inputs */
-            margin-bottom: 15px; /* Space between fields */
+            width: 100%;
+            margin-bottom: 15px;
         }
 
         form button {
@@ -154,42 +210,12 @@
             padding: 15px;
             font-size: 0.9em;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .menu-bar ul li a {
-                font-size: 0.9em;
-                padding: 8px 12px;
-            }
-
-            #home h2 {
-                font-size: 2em;
-            }
-
-            #home p {
-                font-size: 1em;
-            }
-
-            .logo {
-                width: 120px; /* Smaller logo on mobile */
-            }
-        }
-
-        @media (max-width: 480px) {
-            #home h2 {
-                font-size: 1.5em;
-            }
-
-            #home p {
-                font-size: 0.9em;
-            }
-        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Tumelo Dev</h1>!-- Replace with your logo -->
+    <h1>Tumelo Dev</h1>
     <nav class="menu-bar">
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
@@ -203,10 +229,14 @@
 
 <main>
     <section id="home">
-        <h2>Welcome to Tumelo Website Services</h2>
-        <p>Your vision brought to life through exceptional design.</p>
+        <div class="home-content">
+            <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image" class="hero-image">
+            <div class="overlay">
+                <h2>Welcome to Tumelo Website Services</h2>
+                <p>Your vision brought to life through exceptional design.</p>
+            </div>
+        </div>
     </section>
-    
 
     <section id="about">
         <h2>About Us</h2>
