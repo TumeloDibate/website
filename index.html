@@ -6,7 +6,7 @@
     <title>Tumelo Jack Dibate</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png">
     
-    <!-- Update the Google Fonts link to Ubuntu -->
+    <!-- Google Fonts - Ubuntu -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
@@ -15,16 +15,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        } 
+        }
 
         /* General Styles */
         body {
-            font-family: 'Ubuntu', sans-serif; /* Change font to Ubuntu */
+            font-family: 'Ubuntu', sans-serif;
             color: rgba(51, 51, 51, 0.9);
             background: url('station.jpg') center center/cover no-repeat;
-            min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+            min-height: 100vh;
             display: flex;
-            flex-direction: column; /* Align items in a column */
+            flex-direction: column;
         }
 
         /* Header Styling */
@@ -36,36 +36,36 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-        } 
-        
-        header h1 {
-            font-size: 0.9em; /* Adjust this size as needed */
-            border: 2px solid #ffcc00; /* Border with menu hover color */
-            padding: 10px; /* Add padding for better spacing */
-            background-color: rgba(255, 204, 0, 0.2); /* Light background matching hover color */
-            border-radius: 50px; /* Rounded corners for the border */
-            margin: 0; /* Remove margin for alignment */
-        } 
+        }
 
+        header h1 {
+            font-size: 0.9em;
+            border: 2px solid #ffcc00;
+            padding: 10px;
+            background-color: rgba(255, 204, 0, 0.2);
+            border-radius: 50px;
+            margin: 0;
+        }
+
+        /* Social Media Icons */
         .social-media {
-            margin-top: 10px; /* Space between text and icons */
+            margin-top: 10px;
         }
 
         .social-media a {
-            color: rgba(255, 255, 255, 0.9); /* Icon color */
-            margin: 0 10px; /* Space between icons */
-            font-size: 1.5em; /* Icon size */
-    transition: color 0.3s; /* Transition for hover effect */
-}
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
 
-.social-media a:hover {
-    color: #ffcc00; /* Change color on hover */
-}
-
+        .social-media a:hover {
+            color: #ffcc00;
+        }
 
         /* Navigation Menu */
         .menu-bar {
-            border: 2px solid #ffcc00; 
+            border: 2px solid #ffcc00;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.8);
             margin: 5px 0;
@@ -85,7 +85,7 @@
             text-decoration: none;
             font-weight: 500;
             padding: 10px 15px;
-            border: 2px solid transparent; 
+            border: 2px solid transparent;
             border-radius: 5px;
             transition: color 0.3s, background-color 0.3s;
         }
@@ -97,14 +97,14 @@
 
         /* Main Section */
         main {
-            flex: 1; /* Allow main to grow and fill available space */
+            flex: 1;
             display: flex;
             flex-direction: column;
         }
 
         /* Main Welcome Section */
         #home {
-            flex: 1; /* Take remaining space */
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -134,7 +134,7 @@
 
         /* Section Styles */
         section {
-            display: none; 
+            display: none;
             max-width: 90%;
             margin: 30px auto;
             padding: 20px;
@@ -144,13 +144,42 @@
             background-color: rgba(0, 0, 0, 0.5);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        /* Styles for the tagline in the home section */
-        .tagline {
-            font-size: 1.0em; /* Increase font size for emphasis */
-            margin: 10px 0; /* Add top and bottom margin for spacing */
-            color: rgba(255, 255, 255, 0.9); /* Ensure good visibility against the background */
+
+        /* Services Section with Image Grid */
+        #services .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
+        /* Image Animation on Load */
+        #services .grid-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: fadeInZoom 1s ease forwards;
+        }
+
+        /* Hover Effect: Rotate and Scale */
+        #services .grid-container img:hover {
+            transform: scale(1.1) rotate(5deg);
+            transition: transform 0.3s ease;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
         /* Form Styles */
         .form-container {
@@ -164,7 +193,7 @@
         form label {
             color: rgba(0, 0, 0, 0.8);
             margin-bottom: 5px;
-            display: block; /* Ensure label is on its own line */
+            display: block;
         }
 
         form input, form textarea {
@@ -172,8 +201,8 @@
             border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             font-size: 1em;
-            width: 100%; /* Full width inputs */
-            margin-bottom: 15px; /* Space between fields */
+            width: 100%;
+            margin-bottom: 15px;
         }
 
         form button {
@@ -214,10 +243,6 @@
             #home p {
                 font-size: 1em;
             }
-
-            .logo {
-                width: 120px; /* Smaller logo on mobile */
-            }
         }
 
         @media (max-width: 480px) {
@@ -234,89 +259,77 @@
 <body>
 
 <header>
-    <h1>Tumelo Dev</h1> <!-- Replace with your logo -->
+    <h1>Tumelo Dev</h1>
     <nav class="menu-bar">
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
             <li><a href="#" onclick="showSection('about')">About Us</a></li>
-            <li><a href="#" onclick="showSection('services')">Services</a></li>            
+            <li><a href="#" onclick="showSection('services')">Services</a></li>
             <li><a href="#" onclick="showSection('form')">Contact Us</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-   <section id="home">
-    <h2><b>Welcome to Tumelo Website Services</b><br></h2>
-    <p class="tagline"><i>"Crafting Websites, Empowering Businesses."</i><br></p> <!-- Added a class for styling -->
-    <p><b>Our Mission</b> is to help small businesses shine online with custom websites<br>
-    that make a big impact by bringing your vision to life through exceptional design.</p> 
-    <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image">
-</section>
-
+    <section id="home">
+        <h2><b>Welcome to Tumelo Website Services</b><br></h2>
+        <p class="tagline"><i>Crafting Websites, Empowering Businesses.</i><br></p>
+        <p>Our Mission is to help small businesses shine online with custom websites<br>
+        that make a big impact by bringing your vision to life through exceptional design.</p>
+        <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image">
+    </section>
 
     <section id="about">
         <h2><b>About Us</b></h2>
-        <p>Welcome!<br> My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.<br> 
-        I specialize in creating custom websites that are not only visually appealing but also user-friendly and optimized for search engines.<br>
-        My goal is to make the process of building your website as simple and enjoyable as possible. Whether you’re looking for a brand-new website or need to revamp an existing one,<br> 
-        I’ll work closely with you to understand your unique needs and bring your vision to life. With a focus on quality, responsiveness, and affordability, <br>
-        I'm here to help your business stand out in today’s digital world.<br>
-        Let’s connect and start building your online success together!</p>
+        <p>Welcome! My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.</p>
     </section>
 
     <section id="services">
-        <h2><b>Services Offered</b> </h2>
+        <h2><b>Services Offered</b></h2>
         <ul>
-            <li><b>Website Design & Development:</b> Custom websites tailored to your business needs.</li>
-            <li><b>Responsive Design:</b> Ensure your site looks great on all devices.</li>
-            <li><b>SEO Optimization:</b> Improve your site’s visibility on search engines.</li>
-            <li><b>E-commerce Solutions:</b> Set up your online store with ease.</li>
-            <li><b>Maintenance & Support:</b> Ongoing support to keep your website running smoothly.</li>
+            <li><b>Website Design & Development:</b> Create responsive, user-friendly websites that reflect your brand's vision.</li>
+            <li><b>E-commerce Solutions:</b> Build secure online stores with seamless user experience.</li>
+            <li><b>SEO Optimization:</b> Improve website visibility on search engines.</li>
         </ul>
+        <div class="grid-container">
+            <img src="service1.jpg" alt="Website Design">
+            <img src="service2.jpg" alt="E-commerce Solutions">
+            <img src="service3.jpg" alt="SEO Optimization">
+        </div>
     </section>
 
-    <section id="form">
-        <form action="https://formspree.io/f/mpwzwbaq" method="POST">
-        <h2><b>Contact Us</b></h2>
-        <div class="form-container">
-            <form action="your-server-side-script" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+    <section id="form" class="form-container">
+        <h2>Contact Us</h2>
+        <form action="submit-form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 Tumelo Jack Dibate.<br> All rights reserved.</p>
-    
-        
-    
+    &copy; 2024 Tumelo Jack Dibate | All rights reserved
 </footer>
-
 
 <script>
     function showSection(sectionId) {
-        // Hide all sections
-        document.querySelectorAll('section').forEach(section => {
-            section.style.display = 'none';
-        });
-
-        // Show the selected section
+        const sections = document.querySelectorAll('main > section');
+        sections.forEach(section => section.style.display = 'none');
         document.getElementById(sectionId).style.display = 'block';
     }
 
-    // Show the home section by default
-    showSection('home');
+    // Initialize to show home section
+    document.addEventListener('DOMContentLoaded', () => {
+        showSection('home');
+    });
 </script>
 
 </body>
