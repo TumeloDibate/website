@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tumelo Jack Dibate</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
+        } 
 
         /* General Styles */
         body {
-            font-family: 'Ubuntu', sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: rgba(51, 51, 51, 0.9);
             background: url('station.jpg') center center/cover no-repeat;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -34,34 +34,18 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-        }
-
-        header h1 {
-            font-size: 0.9em;
-            border: 2px solid #ffcc00;
-            padding: 10px;
-            background-color: rgba(255, 204, 0, 0.2);
-            border-radius: 50px;
-            margin: 0;
-        }
-
-        .social-media a {
-            color: rgba(255, 255, 255, 0.9);
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-
-        .social-media a:hover {
-            color: #ffcc00;
+        } 
+        
+        .logo {
+            width: 100px; /* Adjust logo size */
         }
 
         /* Navigation Menu */
         .menu-bar {
-            border: 2px solid #ffcc00;
+            border: 2px solid #ffcc00; 
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.8);
-            margin: 5px 0;
+            margin: 10px 0;
             padding: 10px;
         }
 
@@ -78,7 +62,7 @@
             text-decoration: none;
             font-weight: 500;
             padding: 10px 15px;
-            border: 2px solid transparent;
+            border: 2px solid transparent; 
             border-radius: 5px;
             transition: color 0.3s, background-color 0.3s;
         }
@@ -88,15 +72,9 @@
             background-color: #ffcc00;
         }
 
-        /* Main Section */
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
+        /* Main Welcome Section */
         #home {
-            flex: 1;
+            flex: 1; /* Take remaining space */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -126,7 +104,7 @@
 
         /* Section Styles */
         section {
-            display: none;
+            display: none; 
             max-width: 90%;
             margin: 30px auto;
             padding: 20px;
@@ -137,23 +115,30 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* Services Section Animations */
-        #services img {
+        /* Grid Styles for Service and About Sections */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .grid img {
             width: 100%;
-            max-width: 300px;
             border-radius: 10px;
-            transition: transform 0.5s ease, opacity 1s ease;
+            transition: transform 0.5s ease, opacity 0.8s ease;
             opacity: 0;
         }
 
-        #services img:hover {
-            transform: rotate(5deg) scale(1.05);
-        }
-
-        /* Triggering Fade-in and Zoom */
-        #services img.loaded {
+        /* Fade-in Effect */
+        .grid img.loaded {
             opacity: 1;
             transform: scale(1.05);
+        }
+
+        /* Hover Effect */
+        .grid img:hover {
+            transform: scale(1.1) rotate(3deg);
         }
 
         /* Form Styles */
@@ -168,7 +153,7 @@
         form label {
             color: rgba(0, 0, 0, 0.8);
             margin-bottom: 5px;
-            display: block;
+            display: block; /* Ensure label is on its own line */
         }
 
         form input, form textarea {
@@ -176,8 +161,8 @@
             border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             font-size: 1em;
-            width: 100%;
-            margin-bottom: 15px;
+            width: 100%; /* Full width inputs */
+            margin-bottom: 15px; /* Space between fields */
         }
 
         form button {
@@ -201,7 +186,7 @@
             color: rgba(255, 255, 255, 0.9);
             text-align: center;
             padding: 15px;
-            font-size: 0.7em;
+            font-size: 0.9em;
         }
 
         /* Responsive Design */
@@ -218,6 +203,10 @@
             #home p {
                 font-size: 1em;
             }
+
+            .logo {
+                width: 120px; /* Smaller logo on mobile */
+            }
         }
 
         @media (max-width: 480px) {
@@ -226,7 +215,7 @@
             }
 
             #home p {
-                font-size: 0.8em;
+                font-size: 0.9em;
             }
         }
     </style>
@@ -234,12 +223,12 @@
 <body>
 
 <header>
-    <h1>Tumelo Dev</h1>
+    <h1>Tumelo Dev</h1> <!-- Replace with your logo -->
     <nav class="menu-bar">
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
-            <li><a href="#" onclick="showSection('about')">About Us</a></li>
             <li><a href="#" onclick="showSection('services')">Services</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
             <li><a href="#" onclick="showSection('form')">Contact Us</a></li>
         </ul>
     </nav>
@@ -248,60 +237,82 @@
 <main>
     <section id="home">
         <h2><b>Welcome to Tumelo Website Services</b><br></h2>
-        <p class="tagline"><i>Crafting Websites, Empowering Businesses.</i><br></p>
-        <p>Our Mission is to help small businesses shine online with custom websites that make a big impact by bringing your vision to life through exceptional design.</p>
+        <p><i>Crafting Websites, Empowering Businesses.</i><br></p>
+        <p>Our Mission is to help small businesses shine online with custom websites<br>
+        that make a big impact by bringing your vision to life through exceptional design.</p> 
         <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image">
     </section>
 
     <section id="about">
         <h2><b>About Us</b></h2>
-        <p>Welcome!<br> My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.</p>
+        <p>Welcome! My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.<br> 
+            I specialize in creating custom websites that are not only visually appealing but also user-friendly and optimized for search engines.<br>
+            My goal is to make the process of building your website as simple and enjoyable as possible. Whether you’re looking for a brand-new website or need to revamp an existing one,<br> 
+            I’ll work closely with you to understand your unique needs and bring your vision to life. With a focus on quality, responsiveness, and affordability, <br>
+            I'm here to help your business stand out in today’s digital world.<br>
+            Let’s connect and start building your online success together!</p>
+        <div class="grid">
+            <img src="about1.jpg" alt="About Image 1" onload="this.classList.add('loaded');">
+            <img src="about2.jpg" alt="About Image 2" onload="this.classList.add('loaded');">
+        </div>
     </section>
 
     <section id="services">
         <h2><b>Services Offered</b></h2>
+        <div class="grid">
+            <img src="service1.jpg" alt="Service 1" onload="this.classList.add('loaded');">
+            <img src="service2.jpg" alt="Service 2" onload="this.classList.add('loaded');">
+            <img src="service3.jpg" alt="Service 3" onload="this.classList.add('loaded');">
+            <img src="service4.jpg" alt="Service 4" onload="this.classList.add('loaded');">
+            <img src="service5.jpg" alt="Service 5" onload="this.classList.add('loaded');">
+            <img src="service6.jpg" alt="Service 6" onload="this.classList.add('loaded');">
+        </div>
         <ul>
-            <li><b>Website Design & Development:</b> Custom websites tailored to your business needs.</li>
-            <li><b>Responsive Design:</b> Ensure your site looks great on all devices.</li>
-            <li><b>SEO Optimization:</b> Improve your site’s visibility on search engines.</li>
-            <li><b>E-commerce Solutions:</b> Set up your online store with ease.</li>
-            <li><b>Maintenance & Support:</b> Ongoing support to keep your website running smoothly.</li>
+            <li>Artist and Music Promotion Website</li>
+            <li>Portfolio website</li>
+            <li>Online photography portfolios</li>
+            <li>Start your e-commerce store</li>
+            <li>Salon, and Make up Artist website development</li>
+            <li>Catering/Food services website development</li>
+            <li>Kota menu website development</li>
+            <li>And more..............</li>
         </ul>
-        <img src="food.png" alt="Service Image" onload="this.classList.add('loaded');">
     </section>
 
     <section id="form">
-        <form action="https://formspree.io/f/mpwzwbaq" method="POST">
-            <h2><b>Contact Us</b></h2>
-            <div class="form-container">
-                <form action="your-server-side-script" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <h2><b>Contact </b></h2>
+        <div class="form-container">
+            <form action="https://formspree.io/f/mpwzwbaq" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
 
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 Tumelo Jack Dibate.<br> All rights reserved.</p>
+    <p>Soshanguve, Pretoria, South Africa</p>
+    <p>© 2024 Tumelo Dibate. All Rights Reserved.</p>
 </footer>
 
 <script>
+    const sections = document.querySelectorAll('section');
+
     function showSection(sectionId) {
-        document.querySelectorAll('section').forEach(section => {
-            section.style.display = 'none';
+        sections.forEach(section => {
+            section.style.display = section.id === sectionId ? 'block' : 'none';
         });
-        document.getElementById(sectionId).style.display = 'block';
     }
+
+    // Show the home section by default
     showSection('home');
 </script>
 
