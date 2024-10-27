@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tumelo Jack Dibate</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    
-    <!-- Google Fonts - Ubuntu -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
@@ -45,11 +43,6 @@
             background-color: rgba(255, 204, 0, 0.2);
             border-radius: 50px;
             margin: 0;
-        }
-
-        /* Social Media Icons */
-        .social-media {
-            margin-top: 10px;
         }
 
         .social-media a {
@@ -102,7 +95,6 @@
             flex-direction: column;
         }
 
-        /* Main Welcome Section */
         #home {
             flex: 1;
             display: flex;
@@ -145,40 +137,23 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* Services Section with Image Grid */
-        #services .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        /* Image Animation on Load */
-        #services .grid-container img {
+        /* Services Section Animations */
+        #services img {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transform: scale(0.9);
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.5s ease, opacity 1s ease;
             opacity: 0;
-            animation: fadeInZoom 1s ease forwards;
         }
 
-        /* Hover Effect: Rotate and Scale */
-        #services .grid-container img:hover {
-            transform: scale(1.1) rotate(5deg);
-            transition: transform 0.3s ease;
+        #services img:hover {
+            transform: rotate(5deg) scale(1.05);
         }
 
-        /* Animation Keyframes */
-        @keyframes fadeInZoom {
-            0% {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+        /* Triggering Fade-in and Zoom */
+        #services img.loaded {
+            opacity: 1;
+            transform: scale(1.05);
         }
 
         /* Form Styles */
@@ -274,62 +249,60 @@
     <section id="home">
         <h2><b>Welcome to Tumelo Website Services</b><br></h2>
         <p class="tagline"><i>Crafting Websites, Empowering Businesses.</i><br></p>
-        <p>Our Mission is to help small businesses shine online with custom websites<br>
-        that make a big impact by bringing your vision to life through exceptional design.</p>
+        <p>Our Mission is to help small businesses shine online with custom websites that make a big impact by bringing your vision to life through exceptional design.</p>
         <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image">
     </section>
 
     <section id="about">
         <h2><b>About Us</b></h2>
-        <p>Welcome! My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.</p>
+        <p>Welcome!<br> My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.</p>
     </section>
 
     <section id="services">
         <h2><b>Services Offered</b></h2>
         <ul>
-            <li><b>Website Design & Development:</b> Create responsive, user-friendly websites that reflect your brand's vision.</li>
-            <li><b>E-commerce Solutions:</b> Build secure online stores with seamless user experience.</li>
-            <li><b>SEO Optimization:</b> Improve website visibility on search engines.</li>
+            <li><b>Website Design & Development:</b> Custom websites tailored to your business needs.</li>
+            <li><b>Responsive Design:</b> Ensure your site looks great on all devices.</li>
+            <li><b>SEO Optimization:</b> Improve your site’s visibility on search engines.</li>
+            <li><b>E-commerce Solutions:</b> Set up your online store with ease.</li>
+            <li><b>Maintenance & Support:</b> Ongoing support to keep your website running smoothly.</li>
         </ul>
-        <div class="grid-container">
-            <img src="service1.jpg" alt="Website Design">
-            <img src="service2.jpg" alt="E-commerce Solutions">
-            <img src="service3.jpg" alt="SEO Optimization">
-        </div>
+        <img src="food.png" alt="Service Image" onload="this.classList.add('loaded');">
     </section>
 
-    <section id="form" class="form-container">
-        <h2>Contact Us</h2>
-        <form action="submit-form.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <section id="form">
+        <form action="https://formspree.io/f/mpwzwbaq" method="POST">
+            <h2><b>Contact Us</b></h2>
+            <div class="form-container">
+                <form action="your-server-side-script" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Send Message</button>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </form>
     </section>
 </main>
 
 <footer>
-    &copy; 2024 Tumelo Jack Dibate | All rights reserved
+    <p>&copy; 2024 Tumelo Jack Dibate.<br> All rights reserved.</p>
 </footer>
 
 <script>
     function showSection(sectionId) {
-        const sections = document.querySelectorAll('main > section');
-        sections.forEach(section => section.style.display = 'none');
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
+        });
         document.getElementById(sectionId).style.display = 'block';
     }
-
-    // Initialize to show home section
-    document.addEventListener('DOMContentLoaded', () => {
-        showSection('home');
-    });
+    showSection('home');
 </script>
 
 </body>
