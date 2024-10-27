@@ -45,7 +45,23 @@
             background-color: rgba(255, 204, 0, 0.2); /* Light background matching hover color */
             border-radius: 5px; /* Rounded corners for the border */
             margin: 0; /* Remove margin for alignment */
+        } 
+
+        .social-media {
+            margin-top: 10px; /* Space between text and icons */
         }
+
+        .social-media a {
+            color: rgba(255, 255, 255, 0.9); /* Icon color */
+            margin: 0 10px; /* Space between icons */
+            font-size: 1.5em; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-media a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
 
         /* Navigation Menu */
         .menu-bar {
@@ -281,7 +297,22 @@
 
 <footer>
     <p>&copy; 2024 Tumelo Jack Dibate. All rights reserved.</p>
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
 </footer>
+
 
 <script>
     function showSection(sectionId) {
