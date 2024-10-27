@@ -39,20 +39,36 @@
         } 
         
         header h1 {
-            font-size: 2em; /* Adjust this size as needed */
+            font-size: 0.9em; /* Adjust this size as needed */
             border: 2px solid #ffcc00; /* Border with menu hover color */
             padding: 10px; /* Add padding for better spacing */
             background-color: rgba(255, 204, 0, 0.2); /* Light background matching hover color */
-            border-radius: 5px; /* Rounded corners for the border */
+            border-radius: 50px; /* Rounded corners for the border */
             margin: 0; /* Remove margin for alignment */
+        } 
+
+        .social-media {
+            margin-top: 10px; /* Space between text and icons */
         }
+
+        .social-media a {
+            color: rgba(255, 255, 255, 0.9); /* Icon color */
+            margin: 0 10px; /* Space between icons */
+            font-size: 1.5em; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-media a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
 
         /* Navigation Menu */
         .menu-bar {
             border: 2px solid #ffcc00; 
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.8);
-            margin: 10px 0;
+            margin: 5px 0;
             padding: 10px;
         }
 
@@ -128,6 +144,13 @@
             background-color: rgba(0, 0, 0, 0.5);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
+        /* Styles for the tagline in the home section */
+        .tagline {
+            font-size: 1.5em; /* Increase font size for emphasis */
+            margin: 10px 0; /* Add top and bottom margin for spacing */
+            color: rgba(255, 255, 255, 0.9); /* Ensure good visibility against the background */
+        }
+
 
         /* Form Styles */
         .form-container {
@@ -174,7 +197,7 @@
             color: rgba(255, 255, 255, 0.9);
             text-align: center;
             padding: 15px;
-            font-size: 0.9em;
+            font-size: 0.7em;
         }
 
         /* Responsive Design */
@@ -203,7 +226,7 @@
             }
 
             #home p {
-                font-size: 0.9em;
+                font-size: 0.8em;
             }
         }
     </style>
@@ -215,25 +238,26 @@
     <nav class="menu-bar">
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
-            <li><a href="#" onclick="showSection('services')">Services</a></li>
-            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('about')">About Us</a></li>
+            <li><a href="#" onclick="showSection('services')">Services</a></li>            
             <li><a href="#" onclick="showSection('form')">Contact Us</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <section id="home">
-        <h2><b>Welcome to Tumelo Website Services</b><br></h2>
-        <p1><i>Crafting Websites, Empowering Businesses.</i><br></p1>
-        <p>Our Mission is to help small businesses shine online with custom websites<br>
-        that make a big impact by bringing your vision to life through exceptional design.</p> 
-        <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image">
-    </section>
+   <section id="home">
+    <h2><b>Welcome to Tumelo Website Services</b><br></h2>
+    <p class="tagline"><i>Crafting Websites, Empowering Businesses.</i><br></p> <!-- Added a class for styling -->
+    <p>Our Mission is to help small businesses shine online with custom websites<br>
+    that make a big impact by bringing your vision to life through exceptional design.</p> 
+    <img src="pexels-fotios-photos-16129728.jpg" alt="Welcome Image">
+</section>
+
 
     <section id="about">
         <h2><b>About Us</b></h2>
-        <p>Welcome! My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.<br> 
+        <p>Welcome!<br> My name is Tumelo Jack Dibate, and I'm a dedicated website developer passionate about helping small businesses build a strong online presence.<br> 
         I specialize in creating custom websites that are not only visually appealing but also user-friendly and optimized for search engines.<br>
         My goal is to make the process of building your website as simple and enjoyable as possible. Whether you’re looking for a brand-new website or need to revamp an existing one,<br> 
         I’ll work closely with you to understand your unique needs and bring your vision to life. With a focus on quality, responsiveness, and affordability, <br>
@@ -253,6 +277,7 @@
     </section>
 
     <section id="form">
+        <form action="https://formspree.io/f/mpwzwbaq" method="POST">
         <h2><b>Contact Us</b></h2>
         <div class="form-container">
             <form action="your-server-side-script" method="post">
@@ -272,8 +297,12 @@
 </main>
 
 <footer>
-    <p>&copy; 2024 Tumelo Jack Dibate. All rights reserved.</p>
+    <p>&copy; 2024 Tumelo Jack Dibate.<br> All rights reserved.</p>
+    
+        
+    
 </footer>
+
 
 <script>
     function showSection(sectionId) {
