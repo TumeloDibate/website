@@ -144,6 +144,35 @@
             background-color: rgba(0, 0, 0, 0.5);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
+
+          }
+
+        /* Grid Styles for Service and About Sections */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.5s ease, opacity 0.8s ease;
+            opacity: 0;
+        }
+
+        /* Fade-in Effect */
+        .grid img.loaded {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Hover Effect */
+        .grid img:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+
         /* Styles for the tagline in the home section */
         .tagline {
             font-size: 1.5em; /* Increase font size for emphasis */
@@ -263,6 +292,11 @@
         I’ll work closely with you to understand your unique needs and bring your vision to life. With a focus on quality, responsiveness, and affordability, <br>
         I'm here to help your business stand out in today’s digital world.<br>
         Let’s connect and start building your online success together!</p>
+         <div class="grid">
+            <img src="dev.png" alt="About Image 1" onload="this.classList.add('loaded');">
+            <img src="deveper.png" alt="About Image 2" onload="this.classList.add('loaded');">
+        </div>
+    </section>
     </section>
 
     <section id="services">
@@ -274,6 +308,12 @@
             <li><b>E-commerce Solutions:</b> Set up your online store with ease.</li>
             <li><b>Maintenance & Support:</b> Ongoing support to keep your website running smoothly.</li>
         </ul>
+        <div class="grid">
+            <img src="salon.png" alt="Service Image 1" onload="this.classList.add('loaded');">
+            <img src="kotas.jpg" alt="Service Image 2" onload="this.classList.add('loaded');">
+            <img src="cv.jpeg" alt="Service Image 3" onload="this.classList.add('loaded');">
+            <img src="hampers" alt="Service Image 4" onload="this.classList.add('loaded');">
+        </div>
     </section>
 
     <section id="form">
